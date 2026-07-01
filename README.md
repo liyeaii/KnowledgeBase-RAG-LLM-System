@@ -12,6 +12,24 @@
 
 ---
 
+## 快速开始
+
+```bash
+# 1. 安装依赖
+pip install -r requirements.txt
+
+# 2. 配置 API Key（去 dashscope.aliyun.com 免费申请）
+cp .env.example .env   # 编辑 .env 填入 DASHSCOPE_API_KEY
+
+# 3. 启动知识库上传服务
+streamlit run app_upload.py
+
+# 4. 启动 RAG 智能客服（新终端）
+streamlit run app_chat.py --server.port 8502
+```
+
+---
+
 ## 系统架构
 
 ```mermaid
