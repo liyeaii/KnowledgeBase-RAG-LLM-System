@@ -1,0 +1,33 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyc.bak
+
+# ===== 虚拟环境 =====
+venv/
+.venv/
+env/
+
+# ===== 敏感信息（重要！）=====
+.env
+*.key
+*.pem
+
+# ===== 本地数据（不提交到仓库）=====
+chroma_db/
+vector_db/
+chat_history/
+data/
+md5.text
+
+# ===== IDE =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== 其他 =====
+*.log
+dist/
+build/
