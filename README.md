@@ -30,6 +30,24 @@ streamlit run app_chat.py --server.port 8502
 
 ---
 
+## 项目结构
+
+| 文件 | 作用 |
+|------|------|
+| `app_upload.py` | Streamlit 知识库上传页面，提供 Web 界面上传 TXT 文件 |
+| `app_chat.py` | Streamlit 智能客服页面，提供聊天 UI 进行 RAG 问答 |
+| `knowledge_base.py` | 知识库核心逻辑：读取文件、MD5 去重、文本分割、写入 Chroma |
+| `rag.py` | RAG 链组装：检索 → Prompt → LLM → 输出，串联整个问答流程 |
+| `vector_stores.py` | Chroma 向量库封装，提供检索器供 RAG 链调用 |
+| `file_history_store.py` | 会话历史管理，将对话记录持久化到本地 JSON 文件 |
+| `config_data.py` | 全局配置：模型名称、chunk 参数、向量库路径等 |
+| `requirements.txt` | 项目依赖清单，一键安装所有 Python 包 |
+| `.env.example` | 环境变量模板，复制为 `.env` 后填入 API Key |
+| `.gitignore` | Git 忽略规则，防止敏感文件被上传 |
+| `assets/` | 示例知识库文本（尺码推荐、养护、搭配）和演示截图 |
+
+---
+
 ## 系统架构
 
 ```mermaid
